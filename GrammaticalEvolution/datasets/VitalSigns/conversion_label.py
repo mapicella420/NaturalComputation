@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # 1. Carica solo i primi 10.000 record del dataset
-df = pd.read_csv("human_vital_signs_dataset_2024.csv", nrows=10000)
+df = pd.read_csv("human_vital_signs_dataset_2024.csv")
 
 # 2. Mappa la colonna Risk Category in valori numerici
 df["risk_category"] = df["Risk Category"].map({"Low Risk": 0, "High Risk": 1})
