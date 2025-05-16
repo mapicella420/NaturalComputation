@@ -3,8 +3,8 @@
          | <simple_expr> OR <simple_expr>
 
 <simple_expr> ::= <condition>
-                | ( <condition> AND <condition> )
-                | ( <condition> OR <condition> )
+                | ( <simple_expr> AND <condition> )
+                | ( <simple_expr> OR <condition> )
 
 <condition> ::= <HR_condition>
              | <RR_condition>
