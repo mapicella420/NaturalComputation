@@ -1,0 +1,16 @@
+<glucose> ::= (x[:, 36]) <op> (<e_gluc>) <op> <func>(<e_gluc>) <op> <func>((<e_ins>) <op> (<e_cho>))
+
+<e_gluc>  ::=  (<e_gluc><op><e_gluc>) | aq(<e_gluc>,<e_gluc>) | <func>(<e_gluc>) | x[:, <idx_gluc>] | <number>
+<e_ins>  ::=  (<e_ins><op><e_ins>) | aq(<e_ins>,<e_ins>) | <func>(<e_ins>) | x[:, <idx_ins>] | <number>
+<e_cho>  ::=  (<e_cho><op><e_cho>) | aq(<e_cho>,<e_cho>) | <func>(<e_cho>) | x[:, <idx_cho>] | <number>
+
+<func>::=  psqrt | plog | np.sin | np.tanh | np.exp
+
+<op> ::=  + | - | *
+
+<idx_gluc> ::= 18|21|24|27|30|33|36
+<idx_ins> ::=  37|40|43|46|49|52|54
+<idx_cho> ::=  38|41|44|47|50|53|55
+
+<number> ::= <d>.<d> | <d>
+<d> ::= GE_RANGE:100

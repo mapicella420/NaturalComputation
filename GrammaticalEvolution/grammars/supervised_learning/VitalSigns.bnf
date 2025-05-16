@@ -1,0 +1,35 @@
+<expr> ::= <simple_expr>
+         | <simple_expr> AND <simple_expr>
+         | <simple_expr> OR <simple_expr>
+
+<simple_expr> ::= <condition>
+                | ( <condition> AND <condition> )
+                | ( <condition> OR <condition> )
+
+<condition> ::= <HR_condition>
+             | <RR_condition>
+             | <Temp_condition>
+             | <O2_condition>
+             | <SBP_condition>
+             | <DBP_condition>
+             | <BMI_condition>
+
+<HR_condition> ::= HeartRate < 60
+                 | HeartRate > 90
+
+<RR_condition> ::= RespiratoryRate < 12
+                 | RespiratoryRate > 20
+
+<Temp_condition> ::= BodyTemperature < 36.0
+                   | BodyTemperature > 37.5
+
+<O2_condition> ::= OxygenSaturation < 95
+
+<SBP_condition> ::= SystolicBloodPressure < 110
+                  | SystolicBloodPressure > 140
+
+<DBP_condition> ::= DiastolicBloodPressure < 70
+                  | DiastolicBloodPressure > 90
+
+<BMI_condition> ::= Derived_BMI < 18.5
+                  | Derived_BMI > 30
